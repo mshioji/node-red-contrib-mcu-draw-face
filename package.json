@@ -1,0 +1,29 @@
+{
+  "name": "@mshioji/node-red-contrib-mcu-draw-face",
+  "version": "0.1.2",
+  "description": "A simple node for drawing a face on an MCU screen.",
+  "main": "mcu_drawface.js",
+  "author": "masahiro shioji",
+  "license": "Apache-2.0",
+  "node-red": {
+		"version": ">=3.0.0",
+		"nodes": {
+			"draw face": "mcu_drawface.js"
+		}
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mshioji/node-red-contrib-mcu-draw-face.git"
+  },
+  "keywords": [
+    "node-red",
+    "node-red-mcu",
+    "moddable",
+    "M5Stack",
+    "Stack-chan"
+  ],
+  "bugs": {
+    "url": "https://github.com/mshioji/node-red-contrib-mcu-draw-face/issues"
+  },
+  "homepage": "https://github.com/mshioji/node-red-contrib-mcu-draw-face#readme"
+}

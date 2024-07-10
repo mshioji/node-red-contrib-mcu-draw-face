@@ -1,0 +1,166 @@
+<script type="text/javascript">
+    const defaultFaceContent = {
+        "eye": {
+            "pupillary_distance": 140,
+            "vPos": 80,
+            "right": {
+                "enable": true,
+                "x": 0,
+                "y": 0,
+                "w": 30,
+                "h": 30,
+                "rotation": 0,
+                "arcStart": 0,
+                "arcEnd": 360,
+                "lineWidth": 5,
+                "drawMode": "fill"
+            },
+            "left": {
+                "enable": true,
+                "x": 0,
+                "y": 0,
+                "w": 30,
+                "h": 30,
+                "rotation": 0,
+                "arcStart": 0,
+                "arcEnd": 360,
+                "lineWidth": 5,
+                "drawMode": "fill"
+            }
+        },
+        "mouth": {
+            "enable": true,
+            "vPos": 160,
+            "shape": "line",
+            "line": {
+                "x": 0,
+                "y": 0,
+                "w": 90,
+                "lineWidth": 10,
+                "curveStrength": 0
+            },
+            "oval": {
+                "x": 0,
+                "y": 0,
+                "w": 90,
+                "h": 10,
+                "rotation": 0,
+                "arcStart": 0,
+                "arcEnd": 360,
+                "lineWidth": 10,
+                "drawMode": "fill"
+            }
+        }
+    };
+
+    RED.nodes.registerType('drawface',{
+        category: 'MCU',
+        color: '#ffcccc',
+        defaults: {
+            name: {value: ""},
+            face: {value : JSON.stringify(defaultFaceContent, null,0),},
+            moddable_manifest: {
+                value: {
+                    include: "./manifest.json"
+                }
+            }
+        },
+        inputs: 1,
+        outputs: 1,
+        icon: "font-awesome/fa-smile-o",
+        paletteLabel: "draw face",
+        label: function() {
+            return this.name || "draw face"; 
+        },
+        oneditprepare: function(){
+            const div = 
+                $("#node-input-face").typedInput({
+                    type:"json",
+                    types:["json"],
+                });
+                $("#reset-face").click(function() {
+                $("#node-input-face").typedInput("value", JSON.stringify(defaultFaceContent, null, 0));
+                });
+        },
+    });
+</script>
+
+<script type="text/html" data-template-name="drawface">  
+    <div class="form-row">
+        <label for="node-input-name"><i class="fa fa-tag"></i> Name</label>
+        <input type="text" id="node-input-name" placeholder="Name">
+    </div>
+    <div class="form-row">
+        <label for="node-input-face"><i class="fa fa-tag"></i> Face</label>
+        <input type="text" id="node-input-face" placeholder="" >
+    </div>
+    <div class="form-row" style="text-align: right;">
+        <button type="button" class="red-ui-button red-ui-button-small" id="reset-face" style="float: right;">Load Default</button>
+    </div>
+</script>
+
+<script type="text/html" data-help-name="drawface">
+    <h3>About the node-red-contrib-mcu-draw-face</h3>
+    <p>A simple node for drawing a face on an MCU screen.</p>
+    <p>This node is used to display a simple face, similar to Stack-can, on an MCU device.</p>
+
+    <h3>What is Stack-chan?</h3>
+    <p>Stack-chan is a super cute, palm-sized communication robot developed and released by Shishikawa-san.</p>
+    <p>Stack-chan product page is here: <a href="https://github.com/meganetaaan/stack-chan" target="_blank">https://github.com/meganetaaan/stack-chan</a></p>
+    
+    <h3>Usage</h3>
+    <p>To change the face display specifications:</p>
+    <ul>
+        <li>Edit the face object properties on property window of this node, then you can change default face.</li>
+        <li>or obtain the face object output by sending a message to the node</li>
+        <li>then change the properties like eye and mouth within the face object and input them into the node by storing them in msg.payload.</li>
+        <li>You can also send only the properties that need to be changed instead of the entire face object.</li>
+        <li>Please note face properties should be in "msg.payload.face".</li>
+    </ul>
+
+    <h3>Commands to change expressions:</h3>
+    <p>You can change expressions by sending the face object each time, but some expressions have dedicated commands.</p>
+    <p>Send the following strings in msg.payload.cmd to change the expression:</p>
+    <p>Please note the "command" should be in "msg.payload.cmd".</p>
+    <ul>
+        <li>"blink": Blinks the eyes</li>
+        <li>"wink": Winks</li>
+        <li>"smile": Smiles</li>
+        <li>"frown": Frowns</li>
+        <li>"talk": Randomly updates the mouth shape to simulate talking</li>
+        <li>"talk_stop": Stops the "talk" action</li>
+        <li>"default": Resets the face display specifications to default</li>
+    </ul>
+    <h3>Details of face properties:</h3>
+    <p>You can change face by editing the face object JSON in property window.</p>
+    <p>Following specifications are common to the case that sending the face object of msg.payload.face to the input terminal.</p>
+    <ul>
+        <li>"eye": properties for eyes.</li>
+        <li>  pupillary_distance: set pupillary_distance between eyes. </li>
+        <li>  vPos: vertical position from top of the screen.</li>
+        <li>  - you can set properties for each left eye and right eye individually.</li>
+        <li>  enable : true or false to display item or not display.</li>
+        <li>  x, y : shift position from original position.</li>
+        <li>  w, h : width and height.</li>
+        <li>  rotation : rotation of the item. set degree.</li>
+        <li>  arcStart: start position of the arc. set degree.</li>
+        <li>  arcStop: stop position of the arc. set degree.</li>    
+        <li>  lineWidth: Width of the line</li>
+        <li>  drawMode: set "fill" or "stroke"</li>
+        <li>"mouth": properties for mouth.</li>
+        <li>  vPos: vertical position from top of the screen.</li>
+        <li>  enable : true or false to display item or not display.</li>
+        <li>  shape: "line" or "oval"</li>
+        <li>  x, y : shift position from original position.</li>
+        <li>  w, h : width and height.</li>
+        <li>  lineWidth: Width of the line</li>
+        <li>  curveStrength: + number for smile, - number for a disgruntled face</li>
+        <li>  rotation : rotation of the item. set degree.</li>
+        <li>  arcStart: start position of the arc. set degree.</li>
+        <li>  arcStop: stop position of the arc. set degree.</li>    
+        <li>  lineWidth: Width of the line</li>
+        <li>  drawMode: set "fill" or "stroke"</li>
+    </ul>
+</script>
+
+

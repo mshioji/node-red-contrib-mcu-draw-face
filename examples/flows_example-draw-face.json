@@ -1,0 +1,583 @@
+[
+    {
+        "id": "e26d0f1574c8e5b3",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": [],
+        "_mcu": {
+            "mcu": true
+        }
+    },
+    {
+        "id": "9e26fedfd5264afc",
+        "type": "junction",
+        "z": "e26d0f1574c8e5b3",
+        "x": 420,
+        "y": 260,
+        "wires": [
+            [
+                "258238619cfa0ebd"
+            ]
+        ]
+    },
+    {
+        "id": "b8f66566b5695d88",
+        "type": "junction",
+        "z": "e26d0f1574c8e5b3",
+        "x": 680,
+        "y": 260,
+        "wires": [
+            [
+                "35973715ca1805e1",
+                "f48d41c83f4a6c9b"
+            ]
+        ]
+    },
+    {
+        "id": "35973715ca1805e1",
+        "type": "debug",
+        "z": "e26d0f1574c8e5b3",
+        "name": "debug",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 850,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "75332382ce6b787c",
+        "type": "inject",
+        "z": "e26d0f1574c8e5b3",
+        "name": "blink",
+        "props": [
+            {
+                "p": "payload.cmd",
+                "v": "blink",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 190,
+        "y": 140,
+        "wires": [
+            [
+                "9e26fedfd5264afc"
+            ]
+        ]
+    },
+    {
+        "id": "bfc7b60283dce2fb",
+        "type": "inject",
+        "z": "e26d0f1574c8e5b3",
+        "name": "wink",
+        "props": [
+            {
+                "p": "payload.cmd",
+                "v": "wink",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "8",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "2",
+        "topic": "",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 190,
+        "y": 100,
+        "wires": [
+            [
+                "9e26fedfd5264afc"
+            ]
+        ]
+    },
+    {
+        "id": "3f3a1afa80c81ee7",
+        "type": "inject",
+        "z": "e26d0f1574c8e5b3",
+        "name": "smile",
+        "props": [
+            {
+                "p": "payload.cmd",
+                "v": "smile",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "8",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "4",
+        "topic": "",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 190,
+        "y": 180,
+        "wires": [
+            [
+                "9e26fedfd5264afc"
+            ]
+        ]
+    },
+    {
+        "id": "435f048386611742",
+        "type": "inject",
+        "z": "e26d0f1574c8e5b3",
+        "name": "frown",
+        "props": [
+            {
+                "p": "payload.cmd",
+                "v": "frown",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 190,
+        "y": 220,
+        "wires": [
+            [
+                "9e26fedfd5264afc"
+            ]
+        ]
+    },
+    {
+        "id": "85ec5c0afde6c5f6",
+        "type": "inject",
+        "z": "e26d0f1574c8e5b3",
+        "name": "talk",
+        "props": [
+            {
+                "p": "payload.cmd",
+                "v": "talk",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 190,
+        "y": 280,
+        "wires": [
+            [
+                "9e26fedfd5264afc"
+            ]
+        ]
+    },
+    {
+        "id": "3fa099153719b80e",
+        "type": "inject",
+        "z": "e26d0f1574c8e5b3",
+        "name": "talk_stop",
+        "props": [
+            {
+                "p": "payload.cmd",
+                "v": "talk_stop",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 200,
+        "y": 320,
+        "wires": [
+            [
+                "9e26fedfd5264afc"
+            ]
+        ]
+    },
+    {
+        "id": "8749eeb73727c8e3",
+        "type": "inject",
+        "z": "e26d0f1574c8e5b3",
+        "name": "entire properties",
+        "props": [
+            {
+                "p": "payload.face",
+                "v": "{\"eye\":{\"pupillary_distance\":70,\"vPos\":40,\"right\":{\"enable\":true,\"x\":0,\"y\":0,\"w\":30,\"h\":30,\"rotation\":0,\"arcStart\":0,\"arcEnd\":360,\"lineWidth\":5,\"drawMode\":\"fill\"},\"left\":{\"enable\":true,\"x\":0,\"y\":0,\"w\":30,\"h\":30,\"rotation\":0,\"arcStart\":0,\"arcEnd\":360,\"lineWidth\":5,\"drawMode\":\"fill\"}},\"mouth\":{\"enable\":true,\"vPos\":160,\"shape\":\"line\",\"line\":{\"x\":0,\"y\":0,\"w\":90,\"lineWidth\":10,\"curveStrength\":0},\"oval\":{\"x\":0,\"y\":0,\"w\":90,\"h\":10,\"rotation\":0,\"arcStart\":0,\"arcEnd\":360,\"lineWidth\":10,\"drawMode\":\"fill\"}}}",
+                "vt": "json"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 220,
+        "y": 600,
+        "wires": [
+            [
+                "9e26fedfd5264afc"
+            ]
+        ]
+    },
+    {
+        "id": "acf0ea7c302cb76f",
+        "type": "inject",
+        "z": "e26d0f1574c8e5b3",
+        "name": "part of properties",
+        "props": [
+            {
+                "p": "payload.face",
+                "v": "{\"mouth\":{\"enable\":true,\"vPos\":160,\"shape\":\"line\",\"line\":{\"x\":0,\"y\":0,\"w\":90,\"lineWidth\":10,\"curveStrength\":40}}}",
+                "vt": "json"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 220,
+        "y": 640,
+        "wires": [
+            [
+                "9e26fedfd5264afc"
+            ]
+        ]
+    },
+    {
+        "id": "6fce8be0961a4584",
+        "type": "inject",
+        "z": "e26d0f1574c8e5b3",
+        "name": "default",
+        "props": [
+            {
+                "p": "payload.cmd",
+                "v": "default",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 190,
+        "y": 380,
+        "wires": [
+            [
+                "9e26fedfd5264afc"
+            ]
+        ]
+    },
+    {
+        "id": "817eb54278eb191b",
+        "type": "mqtt in",
+        "z": "e26d0f1574c8e5b3",
+        "d": true,
+        "name": "",
+        "topic": "face/test",
+        "qos": "2",
+        "datatype": "json",
+        "broker": "",
+        "nl": false,
+        "rap": true,
+        "rh": 0,
+        "inputs": 0,
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 180,
+        "y": 480,
+        "wires": [
+            [
+                "9e26fedfd5264afc"
+            ]
+        ]
+    },
+    {
+        "id": "f48d41c83f4a6c9b",
+        "type": "mqtt out",
+        "z": "e26d0f1574c8e5b3",
+        "d": true,
+        "name": "",
+        "topic": "face/feedback",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 880,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "2b397933b4f25b00",
+        "type": "comment",
+        "z": "e26d0f1574c8e5b3",
+        "name": "expression commands",
+        "info": "",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 180,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "14a51a0f97877c0f",
+        "type": "comment",
+        "z": "e26d0f1574c8e5b3",
+        "name": "change face properties",
+        "info": "",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 180,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "b01b30e63f6b6417",
+        "type": "comment",
+        "z": "e26d0f1574c8e5b3",
+        "name": "communication",
+        "info": "",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 160,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "c37d7294be6a7ffc",
+        "type": "mcu_digital_in",
+        "z": "e26d0f1574c8e5b3",
+        "name": "center button",
+        "pin": "38",
+        "mode": "Input",
+        "edge": "1",
+        "debounce": "50",
+        "initial": false,
+        "invert": false,
+        "moddable_manifest": {
+            "include": "$(NODEREDMCU)/nodes/mcu/digital/manifest.json"
+        },
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 470,
+        "y": 600,
+        "wires": [
+            [
+                "bcc5d3738dd3efdd"
+            ]
+        ]
+    },
+    {
+        "id": "2475152cd3b19f74",
+        "type": "mcu_digital_in",
+        "z": "e26d0f1574c8e5b3",
+        "name": "right button",
+        "pin": "37",
+        "mode": "Input",
+        "edge": "1",
+        "debounce": "20",
+        "initial": false,
+        "invert": false,
+        "moddable_manifest": {
+            "include": "$(NODEREDMCU)/nodes/mcu/digital/manifest.json"
+        },
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 460,
+        "y": 660,
+        "wires": [
+            [
+                "09773bbcce7dd3b1"
+            ]
+        ]
+    },
+    {
+        "id": "bcc5d3738dd3efdd",
+        "type": "change",
+        "z": "e26d0f1574c8e5b3",
+        "name": "talk",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"cmd\":\"talk\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 610,
+        "y": 600,
+        "wires": [
+            [
+                "9e26fedfd5264afc",
+                "d84c38d088f42069"
+            ]
+        ]
+    },
+    {
+        "id": "09773bbcce7dd3b1",
+        "type": "change",
+        "z": "e26d0f1574c8e5b3",
+        "name": "talk_stop",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"cmd\":\"talk_stop\"}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 620,
+        "y": 660,
+        "wires": [
+            [
+                "9e26fedfd5264afc",
+                "d84c38d088f42069"
+            ]
+        ]
+    },
+    {
+        "id": "d84c38d088f42069",
+        "type": "debug",
+        "z": "e26d0f1574c8e5b3",
+        "name": "debug 162",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 830,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "258238619cfa0ebd",
+        "type": "drawface",
+        "z": "e26d0f1574c8e5b3",
+        "name": "",
+        "face": "{\"eye\":{\"pupillary_distance\":140,\"vPos\":80,\"right\":{\"enable\":true,\"x\":0,\"y\":0,\"w\":30,\"h\":30,\"rotation\":0,\"arcStart\":0,\"arcEnd\":360,\"lineWidth\":5,\"drawMode\":\"fill\"},\"left\":{\"enable\":true,\"x\":0,\"y\":0,\"w\":30,\"h\":30,\"rotation\":0,\"arcStart\":0,\"arcEnd\":360,\"lineWidth\":5,\"drawMode\":\"fill\"}},\"mouth\":{\"enable\":true,\"vPos\":160,\"shape\":\"line\",\"line\":{\"x\":0,\"y\":0,\"w\":90,\"lineWidth\":10,\"curveStrength\":0},\"oval\":{\"x\":0,\"y\":0,\"w\":90,\"h\":10,\"rotation\":0,\"arcStart\":0,\"arcEnd\":360,\"lineWidth\":10,\"drawMode\":\"fill\"}}}",
+        "moddable_manifest": {
+            "include": "./manifest.json"
+        },
+        "_mcu": {
+            "mcu": true
+        },
+        "x": 540,
+        "y": 260,
+        "wires": [
+            [
+                "b8f66566b5695d88"
+            ]
+        ]
+    }
+]
