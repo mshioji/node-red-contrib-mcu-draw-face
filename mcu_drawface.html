@@ -61,7 +61,11 @@
             face: {value : JSON.stringify(defaultFaceContent, null,0),},
             moddable_manifest: {
                 value: {
-                    include: "./manifest.json"
+                    include: [
+                        {
+                            "git": "https://github.com/mshioji/node-red-contrib-mcu-draw-face.git"
+                        }
+                    ]
                 }
             }
         },
