@@ -17,6 +17,7 @@
   },
   "keywords": [
     "node-red",
+    "node-red-node",
     "node-red-mcu",
     "moddable",
     "M5Stack",
