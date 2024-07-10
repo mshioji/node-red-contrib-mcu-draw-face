@@ -31,53 +31,53 @@ To change the face display specifications:
 Edit the face object properties on the property window of this node to change the default face.
 Or, obtain the face object output by sending a message to the node then change the properties like eye and mouth within the face object and input them into the node by storing them in msg.payload.
 You can also send only the properties that need to be changed instead of the entire face object.
-Please note face properties should be in msg.payload.face.
+Please note face properties should be in msg.payload.face.<br>
 
 ### Commands to change expressions
-You can change expressions by sending the face object each time, but some expressions have dedicated commands.
-Send the following strings in msg.payload.cmd to change the expression:
-Please note the "command" should be in msg.payload.cmd.
+You can change expressions by sending the face object each time, but some expressions have dedicated commands.<br>
+Send the following strings in msg.payload.cmd to change the expression:<br>
+Please note the "command" should be in msg.payload.cmd.<br>
 
-"blink": Blinks the eyes
-"wink": Winks
-"smile": Smiles
-"frown": Frowns
-"talk": Randomly updates the mouth shape to simulate talking
-"talk_stop": Stops the "talk" action
-"default": Resets the face display specifications to default
+"blink": Blinks the eyes<br>
+"wink": Winks<br>
+"smile": Smiles<br>
+"frown": Frowns<br>
+"talk": Randomly updates the mouth shape to simulate talking<br>
+"talk_stop": Stops the "talk" action<br>
+"default": Resets the face display specifications to default<br>
 
 ### Details of face properties
-You can change the face by editing the face object JSON in the property window.
+You can change the face by editing the face object JSON in the property window.<br>
 Following specifications are common to the case that sending the face object of msg.payload.face to the input terminal.
 
 #### Eye Properties
-pupillary_distance: Set the distance between the eyes.
-vPos: Vertical position from the top of the screen.
-Each eye (left and right) can have individual properties:
-enable: true or false to display or not display the item.
-x, y: Shift position from the original position.
-w, h: Width and height.
-rotation: Rotation of the item, set in degrees.
-arcStart: Start position of the arc, set in degrees.
-arcStop: Stop position of the arc, set in degrees.
-lineWidth: Width of the line.
-drawMode: Set "fill" or "stroke".
+pupillary_distance: Set the distance between the eyes.<br>
+vPos: Vertical position from the top of the screen.<br>
+Each eye (left and right) can have individual properties:<br>
+enable: true or false to display or not display the item.<br>
+x, y: Shift position from the original position.<br>
+w, h: Width and height.<br>
+rotation: Rotation of the item, set in degrees.<br>
+arcStart: Start position of the arc, set in degrees.<br>
+arcStop: Stop position of the arc, set in degrees.<br>
+lineWidth: Width of the line.<br>
+drawMode: Set "fill" or "stroke".<br>
 
 #### Mouth Properties
-vPos: Vertical position from the top of the screen.
-enable: true or false to display or not display the item.
-shape: "line" or "oval".
-x, y: Shift position from the original position.
-w, h: Width and height.
-lineWidth: Width of the line.
-curveStrength: Positive number for a smile, negative number for a disgruntled face.
-rotation: Rotation of the item, set in degrees.
-arcStart: Start position of the arc, set in degrees.
-arcStop: Stop position of the arc, set in degrees.
-drawMode: Set "fill" or "stroke".
+vPos: Vertical position from the top of the screen.<br>
+enable: true or false to display or not display the item.<br>
+shape: "line" or "oval".<br>
+x, y: Shift position from the original position.<br>
+w, h: Width and height.<br>
+lineWidth: Width of the line.<br>
+curveStrength: Positive number for a smile, negative number for a disgruntled face.<br>
+rotation: Rotation of the item, set in degrees.<br>
+arcStart: Start position of the arc, set in degrees.<br>
+arcStop: Stop position of the arc, set in degrees.<br>
+drawMode: Set "fill" or "stroke".<br>
 
 ## Examples
-There is a example flows to get you started.
+There is a example flows to get you started.<br>
 Pelase refer "examples" folder.
 
 ## Contributing
