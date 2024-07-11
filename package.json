@@ -9,10 +9,10 @@
     "node": ">=18.0.0"
   },
   "node-red": {
-		"version": ">=3.0.0",
-		"nodes": {
-			"draw face": "mcu_drawface.js"
-		}
+    "version": ">=3.0.0",
+    "nodes": {
+      "draw face": "mcu_drawface.js"
+    }
   },
   "repository": {
     "type": "git",
@@ -30,5 +30,11 @@
   "bugs": {
     "url": "https://github.com/mshioji/node-red-contrib-mcu-draw-face/issues"
   },
-  "homepage": "https://github.com/mshioji/node-red-contrib-mcu-draw-face#readme"
+  "homepage": "https://github.com/mshioji/node-red-contrib-mcu-draw-face#readme",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  }
 }
