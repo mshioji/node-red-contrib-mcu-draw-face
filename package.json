@@ -32,9 +32,10 @@
   },
   "homepage": "https://github.com/mshioji/node-red-contrib-mcu-draw-face#readme",
   "directories": {
-    "example": "examples"
+    "example": "examples",
+    "test": "test"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "mocha test/**/*_spec.js"
   }
 }
