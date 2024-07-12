@@ -4,17 +4,23 @@ A simple node for drawing a face on an MCU screen.
 
 ## Table of Contents
 1. [About](#about)
-2. [What is Stack-chan?](#what-is-stack-chan)
-3. [Installation](#installation)
-4. [Usage](#usage)
-5. [Commands to change expressions](#commands-to-change-expressions)
-6. [Details of face properties](#details-of-face-properties)
-7. [Examples](#examples)
-8. [Contributing](#contributing)
-9. [License](#license)
+2. [What is Node-RED MCU?](#what-is-node-red-mcu)
+3. [What is Stack-chan?](#what-is-stack-chan)
+4. [Installation](#installation)
+5. [Usage](#usage)
+6. [Commands to change expressions](#commands-to-change-expressions)
+7. [Details of face properties](#details-of-face-properties)
+8. [Examples](#examples)
+9. [Contributing](#contributing)
+10. [License](#license)
 
 ## About
-This node is used to display a simple face, similar to Stack-chan, on an MCU device.
+This node is used to display a simple face like Stack-chan on the MCU device.
+You can use this node with Node-RED MCU Edition.
+
+## What is Node-RED MCU?
+Node-RED MCU Edition is a Node-RED runtime that runs on resource-constrained microcontrollers (MCUs) released by Mr. Peter Hoddie.
+Node-RED MCU product page is here: [https://github.com/phoddie/node-red-mcu](https://github.com/phoddie/node-red-mcu)
 
 ## What is Stack-chan?
 Stack-chan is a super cute, palm-sized communication robot developed and released by Shishikawa-san.  
@@ -23,8 +29,14 @@ Stack-chan product page is here: [https://github.com/meganetaaan/stack-chan](htt
 ## Installation
 To install this node, run the following command in your Node-RED user directory (typically `~/.node-red`):
 ```bash
+npm install git+https://github.com/@mshioji/node-red-contrib-mcu-draw-face
+```
+Or, if it is already registered in npm, you can also install it with the following command:
+```bash
 npm install @mshioji/node-red-contrib-mcu-draw-face
 ```
+Please restart Node-RED after installation.
+
 ## Usage
 To change the face display specifications:
 
