@@ -29,7 +29,7 @@ Stack-chan product page is here: [https://github.com/meganetaaan/stack-chan](htt
 ## Installation
 To install this node, run the following command in your Node-RED user directory (typically `~/.node-red`):
 ```bash
-npm install git+https://github.com/@mshioji/node-red-contrib-mcu-draw-face
+npm install git+https://github.com/mshioji/node-red-contrib-mcu-draw-face
 ```
 Or, if it is already registered in npm, you can also install it with the following command:
 ```bash
