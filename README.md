@@ -62,6 +62,8 @@ Please note the `command` property should be in `msg.payload.cmd`.<br>
 You can change the face by editing the face object JSON in the property window.<br>
 Following specifications are common to the case that sending the face object of `msg.payload.face` to the input terminal.
 
+![face structure](resources/face_structure.png)
+
 #### Eye Properties
 - `pupillary_distance`: Set the distance between the eyes.
 - `vPos`: Vertical position from the top of the screen.
@@ -76,18 +78,22 @@ Each eye (`left` and `right`) has individual properties:
 - `lineWidth`: Width of the line.
 - `drawMode`: Set `"fill"` or `"stroke"`.
 
+![eyes examples](resources/eyes_example.png)
+
 #### Mouth Properties
-`vPos`: Vertical position from the top of the screen.
-`enable`: `true` or `false` to display or not display the item.
-`shape`: `"line"` or `"oval"`.
-`x`, `y`: Shift the position.
-`w`, `h`: Width and height.
-`lineWidth`: Width of the line.
-`curveStrength`: Positive number for a smile, negative number for a disgruntled face.
-`rotation`: Rotation of the item, set in degrees.
-`arcStart`: Start position of the arc, set in degrees.
-`arcStop`: Stop position of the arc, set in degrees.
-`drawMode`: Set `"fill"` or `"stroke"`.
+- `vPos`: Vertical position from the top of the screen.
+- `enable`: `true` or `false` to display or not display the item.
+- `shape`: `"line"` or `"oval"`.
+- `x`, `y`: Shift the position.
+- `w`, `h`: Width and height.
+- `lineWidth`: Width of the line.
+- `curveStrength`: Positive number for a smile, negative number for a disgruntled face.
+- `rotation`: Rotation of the item, set in degrees.
+- `arcStart`: Start position of the arc, set in degrees.
+- `arcStop`: Stop position of the arc, set in degrees.
+- `drawMode`: Set `"fill"` or `"stroke"`.
+
+![mouth examples](resources/mouth_example.png)
 
 ## Examples
 There is an [example flow](./examples/flows_example-draw-face.json) to get you started.<br>
